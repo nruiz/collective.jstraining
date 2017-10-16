@@ -6,4 +6,11 @@
    i18n_domain="collective.jstraining">
 
 
+   <browser:page
+        name="exercise1"
+        for="*"
+        template="page.pt"
+        permission="zope2.View"
+        />
+
 </configure>

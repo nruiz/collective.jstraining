@@ -12,5 +12,11 @@
      description="Install Exercise 8 training package"
      provides="Products.GenericSetup.interfaces.EXTENSION"
      />
+     
+     <plone:static
+          directory="static"
+          type="plone"
+          name="exercise8"
+          />
 
 </configure>

@@ -7,11 +7,25 @@
    i18n_domain="collective.jstraining">
 
    <genericsetup:registerProfile
-     name="default"
-     title="Exercise 6"
-     directory="profiles/default"
-     description="Install Exercise 6 training package"
-     provides="Products.GenericSetup.interfaces.EXTENSION"
-     />
+         name="default"
+         title="Exercise 6"
+         directory="profiles/default"
+         description="Install Exercise 6 training package"
+         provides="Products.GenericSetup.interfaces.EXTENSION"
+         />
+
+     <plone:static
+          directory="static"
+          type="plone"
+          name="exercise6"
+          />
+
+      <adapter factory=".widget.LeadImageMinSizeImageFieldWidget" />
+    <z3c:widgetTemplate
+      mode="input"
+      widget=".interfaces.IMinSizeImageWidget"
+      layer=".interfaces.IExercise6Layer"
+      template="image_widget.pt"
+      />
 
 </configure>

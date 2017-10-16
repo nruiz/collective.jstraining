@@ -5,12 +5,26 @@
    xmlns:genericsetup="http://namespaces.zope.org/genericsetup"
    i18n_domain="collective.jstraining">
 
-   <genericsetup:registerProfile
-     name="default"
-     title="Exercise 2"
-     directory="profiles/default"
-     description="Install Exercise 2 training package"
-     provides="Products.GenericSetup.interfaces.EXTENSION"
-     />
+    <genericsetup:registerProfile
+         name="default"
+         title="Exercise 2"
+         directory="profiles/default"
+         description="Install Exercise 2 training package"
+         provides="Products.GenericSetup.interfaces.EXTENSION"
+         />
+
+    <plone:static
+         directory="static"
+         type="plone"
+         name="exercise2"
+         />
+
+     <browser:page
+         name="exercise2"
+         for="*"
+         class=".browser.Exercise2View"
+         template="page.pt"
+         permission="zope2.View"
+         />
 
 </configure>

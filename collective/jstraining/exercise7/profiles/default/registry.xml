@@ -1,4 +1,29 @@
 <?xml version="1.0"?>
 <registry>
-
+    <records prefix="plone.resources/tablesorter"
+             interface='Products.CMFPlone.interfaces.IResourceRegistry'>
+      <value key="js">++plone++exercise7/jquery.tablesorter.min.js</value>
+    </records>
+    <records prefix="plone.resources/exercise7"
+            interface='Products.CMFPlone.interfaces.IResourceRegistry'>
+    <value key="js">++plone++exercise7/pattern.js</value>
+    <value key="css">
+      <element>++plone++exercise7/pattern.less</element>
+    </value>
+  </records>
+  <records prefix="plone.bundles/exercise7"
+          interface='Products.CMFPlone.interfaces.IBundleRegistry'>
+  <value key="resources">
+    <element>exercise7</element>
+  </value>
+  <value key="merge_with">default</value>
+  <value key="enabled">True</value>
+  <value key="jscompilation">++plone++exercise7/exercise7-compiled.min.js</value>
+  <value key="csscompilation">++plone++exercise7/exercise7-compiled.css</value>
+  <value key="last_compilation">2016-10-04 00:00:00</value>
+  <value key="stub_js_modules">
+    <element>jquery</element>
+    <element>pat-base</element>
+  </value>
+</records>
 </registry>
